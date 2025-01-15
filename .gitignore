@@ -1,0 +1,11 @@
+node_modules
+.env
+
+#ignore logs folder
+logs/*
+!logs/.gitkeep
+
+#error logs
+# yarn-error.log
+
+***/public/uploads*
