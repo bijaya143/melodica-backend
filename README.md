@@ -34,8 +34,3 @@ An admin can access into the system by using the following credentials:
 - `password`=password
 
 ---
-
-### Project Structure
-
-- Everything is quite similar to default Express structure
-- All API Routes in src\routes\index.js
