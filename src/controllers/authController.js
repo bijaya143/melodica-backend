@@ -2,6 +2,10 @@ const { fetch, create } = require("../model/user");
 const { sign } = require("../service/jwtService");
 const { compare, hash } = require("../service/passwordService");
 
+/**
+ * Handles user login by verifying email and password.
+ * If authentication is successful, generates and returns an access token.
+ */
 const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
