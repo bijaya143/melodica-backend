@@ -10,6 +10,7 @@ const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
+    // Fetch the user by email
     const [user] = await fetch({ email });
     if (!user) {
       throw new Error("User not found.");
