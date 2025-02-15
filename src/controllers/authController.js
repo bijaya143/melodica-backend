@@ -63,6 +63,11 @@ const register = async (req, res, next) => {
   }
 };
 
+/**
+ * Handles OAuth authentication.
+ * If the user exists, logs them in and returns an access token.
+ * If the user does not exist, creates a new account and then returns an access token.
+ */
 const oauth = async (req, res, next) => {
   const { email } = req.body;
   const [existedUser] = await fetch({ email });
