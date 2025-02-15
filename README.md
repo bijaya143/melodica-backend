@@ -16,7 +16,7 @@
 
 ### Local Development
 
-1. Clone the repository: https://github.com/st6003/backend-secb-bijaya143
+1. Clone the repository: https://github.com/bijaya143/melodica-backend
 2. Run `npm install` to Install Dependencies.
 3. Copy contents of `.env.example` file to a new file `.env`, If you're on Mac OSX or Linux just run: `cp .env.example .env`
 4. Create an new database for the project: Use `MongoDB Atlas` or any preferred `mongoDB workbench`
