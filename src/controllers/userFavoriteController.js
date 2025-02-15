@@ -4,6 +4,12 @@ const {
   validateUserFavorite,
 } = require("../service/userFavoriteService");
 
+/**
+ * Adds a song to the user's favorites list.
+ * @param {Object} req - Express request object containing userId and songId in the request body.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const createUserFavorite = async (req, res, next) => {
   try {
     const favorite = await storeUserFavorite(req.userId, req.body.songId);
