@@ -95,6 +95,12 @@ const removeUserFavorite = async (req, res, next) => {
   }
 };
 
+/**
+ * Retrieves a specific favorite song for the user.
+ * @param {Object} req - Express request object containing userId and songId in the request params.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const getUserFavorite = async (req, res, next) => {
   const favorite = await validateUserFavorite(req.userId, req.params.songId);
   if (!favorite) {
