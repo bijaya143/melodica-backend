@@ -22,6 +22,7 @@ const login = async (req, res, next) => {
       throw new Error("Password does not match");
     }
 
+    // Prepare token payload
     const tokenDetails = {
       id: user._id,
       email: user.email,
