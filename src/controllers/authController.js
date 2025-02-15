@@ -46,6 +46,7 @@ const login = async (req, res, next) => {
  */
 const register = async (req, res, next) => {
   try {
+    // Hash the user’s password before saving
     const hashedPassword = await hash(req.body.password);
     const user = await create({ ...req.body, password: hashedPassword });
     const tokenDetails = {
