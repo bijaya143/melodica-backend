@@ -2,6 +2,10 @@ const { create, update, fetch, fetchById, remove } = require("../model/artist");
 const { uploadFileToLocal } = require("../service/uploadService");
 
 const filePrefix = "artists";
+/**
+ * Get a list of artists with optional search and pagination.
+ * Supports filtering by keyword (case-insensitive search on display name).
+ */
 const getArtists = async (req, res, next) => {
   const findParams = {};
   const { limit, page, keyword } = req.query;
