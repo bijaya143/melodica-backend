@@ -39,6 +39,11 @@ const login = async (req, res, next) => {
     return res.status(401).json({ success: false, data: error.message });
   }
 };
+
+/**
+ * Handles new user registration.
+ * Hashes the password, creates a new user, and returns an access token.
+ */
 const register = async (req, res, next) => {
   try {
     const hashedPassword = await hash(req.body.password);
