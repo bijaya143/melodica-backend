@@ -78,6 +78,9 @@ const createArtist = async (req, res, next) => {
   }
 };
 
+/**
+ * Update an artist's details, including their image if provided.
+ */
 const updateArtist = async (req, res, next) => {
   // Validation
   const artist = await fetchById(req.params.id);
