@@ -128,6 +128,10 @@ const deleteArtist = async (req, res, next) => {
   }
 };
 
+/**
+ * Increase the stream count of an artist based on a keyword search.
+ * If multiple matches exist, only the first result is updated.
+ */
 const increaseArtistStreamCount = async (req, res, next) => {
   const { keyword } = req.query;
   let findParams = {};
