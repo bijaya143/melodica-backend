@@ -143,6 +143,7 @@ const increaseArtistStreamCount = async (req, res, next) => {
       displayName: { $regex: queryRegex },
     };
   }
+  // Fetch artist(s) matching the keyword
   const artists = await fetch(findParams);
   if (artists.length == 0) {
     return res.status(404).json({
