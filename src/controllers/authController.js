@@ -29,6 +29,7 @@ const login = async (req, res, next) => {
       userType: user.userType,
     };
 
+    // Generate access token
     const accessToken = await sign(tokenDetails, false);
 
     const data = { accessToken };
