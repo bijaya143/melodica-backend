@@ -154,6 +154,7 @@ const increaseArtistStreamCount = async (req, res, next) => {
     });
   }
   try {
+    // Update the first matching artist's stream count
     await update(artists[0]._id, { streamCount: artists[0].streamCount + 1 });
     return res.status(200).json({
       success: true,
