@@ -29,6 +29,13 @@ const createUserFavorite = async (req, res, next) => {
     });
   }
 };
+
+/**
+ * Retrieves a paginated list of the user's favorite songs.
+ * @param {Object} req - Express request object containing pagination parameters (limit, page).
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const getUserFavorites = async (req, res, next) => {
   const { limit, page } = req.query;
   const paginationParams = {
