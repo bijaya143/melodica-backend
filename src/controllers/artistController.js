@@ -14,6 +14,7 @@ const getArtists = async (req, res, next) => {
     limit: limit,
     skip: (page - 1) * limit,
   };
+  // Apply keyword filter if provided
   if (keyword) {
     findParams.displayName = { $regex: keyword, $options: "i" };
   }
