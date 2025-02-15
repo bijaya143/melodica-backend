@@ -50,6 +50,10 @@ const getArtistById = async (req, res, next) => {
   });
 };
 
+/**
+ * Create a new artist with an image.
+ * The image is required and is uploaded to local storage.
+ */
 const createArtist = async (req, res, next) => {
   // Image Validation
   if (!req.files && !req.files?.["image"]) {
