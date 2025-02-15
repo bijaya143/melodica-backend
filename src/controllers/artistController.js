@@ -136,6 +136,7 @@ const increaseArtistStreamCount = async (req, res, next) => {
   const { keyword } = req.query;
   let findParams = {};
 
+  // Apply keyword filter if provided
   if (keyword) {
     const queryRegex = new RegExp(keyword, "i");
     findParams = {
