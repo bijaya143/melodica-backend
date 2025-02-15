@@ -91,7 +91,7 @@ const updateArtist = async (req, res, next) => {
     });
   }
 
-  let key = artist.imageUrl;
+  let key = artist.imageUrl; // Retain existing image URL by default
 
   // Image Update
   if (req.files && req.files?.["image"]) {
