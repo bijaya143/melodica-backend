@@ -59,6 +59,13 @@ const getUserFavorites = async (req, res, next) => {
     });
   }
 };
+
+/**
+ * Removes a song from the user's favorites list.
+ * @param {Object} req - Express request object containing userId and songId in the request params.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const removeUserFavorite = async (req, res, next) => {
   const favorite = await validateUserFavorite(req.userId, req.params.songId);
   if (!favorite) {
