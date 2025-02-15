@@ -31,6 +31,9 @@ const getArtists = async (req, res, next) => {
   }
 };
 
+/**
+ * Get artist details by their unique ID.
+ */
 const getArtistById = async (req, res, next) => {
   const artist = await fetchById(req.params.id);
   if (!artist) {
