@@ -16,6 +16,7 @@ const login = async (req, res, next) => {
       throw new Error("User not found.");
     }
 
+    // Compare the provided password with the stored hashed password
     const passwordCompare = await compare(password, user.password);
     if (!passwordCompare) {
       throw new Error("Password does not match");
