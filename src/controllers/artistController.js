@@ -9,6 +9,7 @@ const filePrefix = "artists";
 const getArtists = async (req, res, next) => {
   const findParams = {};
   const { limit, page, keyword } = req.query;
+  // Setup pagination parameters
   const paginationParams = {
     limit: limit,
     skip: (page - 1) * limit,
