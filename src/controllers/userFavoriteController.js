@@ -102,6 +102,7 @@ const removeUserFavorite = async (req, res, next) => {
  * @param {Function} next - Express next middleware function.
  */
 const getUserFavorite = async (req, res, next) => {
+  // Validate if the song exists in the user's favorite list
   const favorite = await validateUserFavorite(req.userId, req.params.songId);
   if (!favorite) {
     return res.status(404).json({
