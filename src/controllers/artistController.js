@@ -111,6 +111,9 @@ const updateArtist = async (req, res, next) => {
   }
 };
 
+/**
+ * Delete an artist by ID.
+ */
 const deleteArtist = async (req, res, next) => {
   try {
     const artist = await remove(req.params.id);
